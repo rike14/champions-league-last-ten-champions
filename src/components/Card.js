@@ -25,16 +25,22 @@ const Card = ({ product, children }) => {
                         {children}
                     </Typography>
                     <Typography variant='subtitle1'>
-                        R$ {product.price.toFixed(2)}
+                        <a href={product.video} target="_blank" style={{ backgroundColor: "#011043", color: "white" }}
+                                variant="contained">
+                            <Button style={{ backgroundColor: "#011043", color: "white", marginTop: "10px" }}
+                                    variant="contained">See the video of Final
+                            </Button></a>
                     </Typography>
                     </Grid>
                 
-                <Button 
+                    <Button style={{ backgroundColor: "#011043", color: "white", marginTop:"20px" }}
                     variant="contained"
                     onClick={()=>dispatch(cartActions.Add(cart, product))}
                 >
-                    Adicionar
+                    Add to favorite
                 </Button>
+                    
+                    
                 </Grid>
             </Paper>
         </Grid>

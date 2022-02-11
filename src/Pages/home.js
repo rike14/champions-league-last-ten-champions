@@ -23,7 +23,9 @@ const HomePage = () => {
         category => {
             const container = { };
             container['id'] = category.id_categorys;
-            container['name'] = category.name_categorys;
+            container['name_categorys'] = category.name_categorys;
+            container['name'] = category.name_product;
+            container['vice'] = category.vice;
             return container;
         }
     )
@@ -49,7 +51,7 @@ const HomePage = () => {
             <Grid item xs={3}>
                 <Paper className={classes.paper}>
                     <Typography variant='h5'>
-                        Categorias
+                        Last Champions
                     </Typography>
                     <List>
                         {category.map(
@@ -57,8 +59,9 @@ const HomePage = () => {
                                 return (
                                     <Item
                                         key = {category.id} 
-                                        name= {category.name}
-                                        details={count[category.name]}
+                                        name= {category.name_categorys}
+                                        details={[category.name," - ", category.vice]}
+                                        
                                     />
                                 )
                             }

@@ -13,7 +13,7 @@ export default function cart(state = INITIAL_STATE, action){
                 let item = {
                     id: action.product.id_product,
                     name: action.product.name_product,
-                    price: action.product.price,
+                    categorys: action.product.category,
                     image: action.product.image,
                     quantity: 1
                 }
@@ -30,7 +30,7 @@ export default function cart(state = INITIAL_STATE, action){
                     let item = {
                         id: action.product.id_product,
                         name: action.product.name_product,
-                        price: action.product.price,
+                        categorys: action.product.category,
                         image: action.product.image,
                         quantity: 1
                     }

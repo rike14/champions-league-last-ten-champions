@@ -54,12 +54,12 @@ const Contatos = () => {
     return(
         <>
             <Grid container direction="row" xs={12}>
-                <TextField id="name" label="Name" value={author} onChange={(event)=>{setAuthor(event.target.value)}} fullWidth/>
-                <TextField id="message" label="Message" value={content} onChange={(event)=>{setContent(event.target.value)}} fullWidth/>
+                <TextField style={{ color: "#011043" }} id="name" label="Name" value={author} onChange={(event)=>{setAuthor(event.target.value)}} fullWidth/>
+                <TextField style={{ color: "#011043" }}id="message" label="Message" value={content} onChange={(event)=>{setContent(event.target.value)}} fullWidth/>
             </Grid>
 
             {validator && 
-                <div className="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                <div className="alert alert-danger alert-dismissible fade show mt-2" role="alert">
                     <strong>Por favor preencha todos os campos!</strong>
                     <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -71,7 +71,7 @@ const Contatos = () => {
                 </div>
             }
 
-            <Button onClick={sendMessage} className="mt-2" variant="contained" color="primary">
+            <Button style={{ backgroundColor: "#011043", color: "white" }} onClick={sendMessage} className="mt-4" variant="contained" >
                 Sent
             </Button>
 
